@@ -28,6 +28,12 @@ public class OpenAIController {
     @Value("${openai.api.model}")
     private String openaiModel;
 
+    @Value("${openai.api.temperature}")
+    private Double temperature;
+
+    @Value("${openai.api.maxTokens}")
+    private Integer maxTokens;
+
     /***
      *
      * @param text
@@ -43,7 +49,9 @@ public class OpenAIController {
         CompletionRequest completionRequest = CompletionRequest.builder()
                 .prompt(text)
                 .model(openaiModel)
-                .echo(true)
+                .temperature(temperature)
+                .echo(false)
+                .maxTokens(maxTokens)
                 .build();
         service.createCompletion(completionRequest).getChoices().forEach(c -> responses.add(c.getText()));
 
