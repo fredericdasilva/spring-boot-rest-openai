@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
+    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +40,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/Fred/IdeaProjects/JavaApp_springboot-rest-api/src/main/resources",
-    "settings.editor.selected.configurable": "coverage"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -50,7 +56,7 @@
       <recent name="org.example.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in openai-chatgpt-rest-api">
+  <component name="RunManager" selected="Application.JavaApp_springboot-rest-api">
     <configuration name="JavaApp_springboot-rest-api" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.openai.chatgpt.Application" />
       <module name="openai-chatgpt-rest-api" />
@@ -128,19 +134,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="openai-chatgpt-rest-api" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="openai-chatgpt-rest-api" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in openai-chatgpt-rest-api" />
@@ -188,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675592809169</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api">
+      <created>1675593177673</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675593177673</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +299,10 @@
         <watch expression="rows.get(0)" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaApp_springboot_rest_api$All_in_openai_chatgpt_rest_api.ic" NAME="All in openai-chatgpt-rest-api Coverage Results" MODIFIED="1675591639754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
