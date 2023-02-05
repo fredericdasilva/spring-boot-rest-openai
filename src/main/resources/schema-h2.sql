@@ -1,0 +1,1 @@
+CREATE ALIAS ROW_TO_JSON FOR "org.example.utility.Functions.rowToJson";
