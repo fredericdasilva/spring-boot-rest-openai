@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api">
+    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675593177673</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8">
+      <created>1675633207227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675633207227</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +212,8 @@
     <MESSAGE value="Play with OpenAI: Play with OpenAI&#10;&#10;First commit" />
     <MESSAGE value=":sparkles: feat(completion): add temperature and maxTokens&#10;&#10;add temperature and maxTokens" />
     <MESSAGE value=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
+    <MESSAGE value=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8" />
+    <option name="LAST_COMMIT_MESSAGE" value=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
