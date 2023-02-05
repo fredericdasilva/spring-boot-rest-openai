@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":sparkles: feat(completion): add temperature and maxTokens&#10;&#10;add temperature and maxTokens">
+    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api">
       <change afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/config/WebConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/dto/CompletionInputDTO.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/service/CompletionService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/service/OpenAiFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/lombok.config" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/schema-h2.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -46,14 +47,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Fred/IdeaProjects/JavaApp_springboot-rest-api/src/main/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Fred/IdeaProjects/JavaApp_springboot-rest-api/src/main/resources",
+    "settings.editor.selected.configurable": "coverage"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Fred\IdeaProjects\JavaApp_springboot-rest-api\src\main\resources" />
@@ -188,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672277808331</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api">
+      <created>1675592655795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675592655795</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -205,7 +213,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Play with OpenAI: Play with OpenAI&#10;&#10;First commit" />
     <MESSAGE value=":sparkles: feat(completion): add temperature and maxTokens&#10;&#10;add temperature and maxTokens" />
-    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: feat(completion): add temperature and maxTokens&#10;&#10;add temperature and maxTokens" />
+    <MESSAGE value=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
+    <option name="LAST_COMMIT_MESSAGE" value=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -298,5 +307,8 @@
         <watch expression="rows.get(0)" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JavaApp_springboot_rest_api$All_in_openai_chatgpt_rest_api.ic" NAME="All in openai-chatgpt-rest-api Coverage Results" MODIFIED="1675591639754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
