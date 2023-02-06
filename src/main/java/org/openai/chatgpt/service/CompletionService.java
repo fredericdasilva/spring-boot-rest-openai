@@ -8,14 +8,18 @@ import java.io.IOException;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class CompletionService {
 
-    final Map<String, String> answersPredefined = Map.of(
-            "[your name]", "Grumpy Cat",
-            "[votre nom]", "Grumpy Cat"
-    );
+    final Map<String, String> answersPredefined = Stream.of(new String[][] {
+            { "[your name]", "Grumpy Cat" },
+            { "[votre nom]", "Grumpy Cat" },
+    }).collect(Collectors.collectingAndThen(
+            Collectors.toMap(data -> data[0], data -> data[1]),
+            Collections::<String, String> unmodifiableMap));
 
     public List<String> manageSpecificText(String text) throws IOException {
 
