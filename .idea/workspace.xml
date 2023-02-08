@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8">
+    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,17 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Fred/IdeaProjects/JavaApp_springboot-rest-api/src/main/resources",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Fred/IdeaProjects/JavaApp_springboot-rest-api/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Fred\IdeaProjects\JavaApp_springboot-rest-api\src\main\resources" />
@@ -194,7 +195,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675633207227</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary=":green_heart: ci(ci): add version 2.3.2 for maven-compiler-plugin&#10;&#10;add version 2.3.2 for maven-compiler-plugin">
+      <created>1675634542333</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675634542333</updated>
+    </task>
+    <task id="LOCAL-00008" summary=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of">
+      <created>1675670758683</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675670758683</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -213,7 +228,9 @@
     <MESSAGE value=":sparkles: feat(completion): add temperature and maxTokens&#10;&#10;add temperature and maxTokens" />
     <MESSAGE value=":sparkles: feat(completion): add completion and image api&#10;&#10;add completion and image api" />
     <MESSAGE value=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8" />
-    <option name="LAST_COMMIT_MESSAGE" value=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8" />
+    <MESSAGE value=":green_heart: ci(ci): add version 2.3.2 for maven-compiler-plugin&#10;&#10;add version 2.3.2 for maven-compiler-plugin" />
+    <MESSAGE value=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of" />
+    <option name="LAST_COMMIT_MESSAGE" value=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,7 +272,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/openai/chatgpt/service/CompletionService.java</url>
-          <line>27</line>
+          <line>31</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
