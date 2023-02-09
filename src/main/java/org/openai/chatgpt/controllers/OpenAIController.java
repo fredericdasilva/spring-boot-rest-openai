@@ -3,6 +3,7 @@ package org.openai.chatgpt.controllers;
 import com.theokanning.openai.OpenAiService;
 import com.theokanning.openai.completion.CompletionRequest;
 import com.theokanning.openai.image.CreateImageRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.openai.chatgpt.service.CompletionService;
 import org.openai.chatgpt.service.OpenAiFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import static org.openai.chatgpt.controllers.OpenAIController.REQUEST_MAPPING_UR
  * A controller used for OpenAI
  */
 @RestController
+@Slf4j
 @RequestMapping(REQUEST_MAPPING_URL)
 public class OpenAIController {
 
@@ -52,6 +54,7 @@ public class OpenAIController {
     @ResponseStatus(HttpStatus.OK)
     public String chat(@RequestBody String text) throws IOException {
 
+        log.info("/completion => " + text);
         List<String> responsesOpenAI = new ArrayList<>();
         List<String> responsesGrumpyCat;
 
@@ -82,6 +85,7 @@ public class OpenAIController {
     @ResponseStatus(HttpStatus.OK)
     public String image(@RequestBody String text) {
 
+        log.info("/image => " + text);
         List<String> responses = new ArrayList<>();
 
         //OpenAiService service = new OpenAiService(openaiApiKey);
