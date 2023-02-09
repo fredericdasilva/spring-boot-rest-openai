@@ -23,6 +23,7 @@ import static org.openai.chatgpt.controllers.OpenAIController.REQUEST_MAPPING_UR
  */
 @RestController
 @Slf4j
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3000", "http://34.160.152.235"})
 @RequestMapping(REQUEST_MAPPING_URL)
 public class OpenAIController {
 

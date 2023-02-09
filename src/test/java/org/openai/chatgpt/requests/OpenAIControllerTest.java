@@ -14,7 +14,6 @@ import org.junit.*;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.openai.chatgpt.config.WebConfig;
 import org.openai.chatgpt.controllers.OpenAIController;
 import org.openai.chatgpt.service.CompletionService;
 import org.openai.chatgpt.service.OpenAiFactory;
@@ -33,7 +32,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import java.util.Arrays;
 
 @RunWith(OrderedTestRunner.class)
-@ContextConfiguration(classes = { WebConfig.class, OpenAIController.class })
+@ContextConfiguration(classes = { OpenAIController.class })
 @ActiveProfiles("test")
 @SpringBootTest
 @AutoConfigureMockMvc
