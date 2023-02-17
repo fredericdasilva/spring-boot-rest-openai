@@ -1,0 +1,79 @@
+#Spring Boot server configuration
+server:
+  address: 0.0.0.0
+  port: 8000
+
+openai:
+    api:
+      model: "text-davinci-003"
+      temperature: 0.9
+      maxTokens: 2048
+
+logging:
+  level:
+      org:
+        springframework:
+            web: trace
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  prometheus:
+    enabled: true
+spring:
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+bucket4j:
+  enabled: true
+  filters:
+    - cache-name: buckets
+      url: .*
+      rate-limits:
+        - bandwidths: # maximum of 5 requests within 10 seconds
+            - capacity: 5
+              time: 10
+              unit: seconds
+
+#    - cache-name: buckets
+#      filter-method: servlet
+#      filter-order: -200
+#      http-content-type: application/json;charset=UTF-8
+#      url: .*
+#      metrics:
+#        tags:
+#          - key: USERNAME
+#            expression: "@securityService.username() != null ? @securityService.username() : 'anonym'"
+#          - key: URL
+#            expression: getRequestURI()
+#      rate-limits:
+#        - bandwidths:
+#            - capacity: 30
+#              time: 1
+#              unit: minutes
+#    - cache-name: buckets
+#      filter-method: servlet
+#      filter-order: 1
+#      http-content-type: application/json;charset=UTF-8
+#      url: .*
+#      metrics:
+#        tags:
+#          - key: USERNAME
+#            expression: "@securityService.username() != null ? @securityService.username() : 'anonym'"
+#          - key: URL
+#            expression: getRequestURI()
+#      rate-limits:
+#        - execute-condition:  "@securityService.username() == 'admin'"
+#          cache-key: "@securityService.username()?: getRemoteAddr()"
+#          bandwidths:
+#            - capacity: 30
+#              time: 1
+#              unit: minutes
+#        - execute-condition: "@securityService.username() != 'admin'"
+#          cache-key: "@securityService.username()?: getRemoteAddr()"
+#          bandwidths:
+#            - capacity: 5
+#              time: 1
+#              unit: minutes

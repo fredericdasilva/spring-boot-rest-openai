@@ -23,7 +23,7 @@ import static org.openai.chatgpt.controllers.OpenAIController.REQUEST_MAPPING_UR
  */
 @RestController
 @Slf4j
-@CrossOrigin(origins = {"http://localhost:3000", "http://192.168.1.178:3000", "http://34.160.152.235"})
+@CrossOrigin(origins = {"http://localhost:3000", "http://192.168.1.178:3000", "https://www.grumpycat.cloud"})
 @RequestMapping(REQUEST_MAPPING_URL)
 public class OpenAIController {
 
@@ -64,7 +64,6 @@ public class OpenAIController {
         if (!responsesGrumpyCat.isEmpty())
             return responsesGrumpyCat.stream().reduce("", String::concat);
 
-        //OpenAiService service = new OpenAiService(openaiApiKey);
         OpenAiService service = openAiFactory.getOpenAiService();
 
             CompletionRequest completionRequest = CompletionRequest.builder()
@@ -75,8 +74,6 @@ public class OpenAIController {
                     .maxTokens(maxTokens)
                     .build();
             service.createCompletion(completionRequest).getChoices().forEach(c -> responsesOpenAI.add(c.getText()));
-
-           // responsesOpenAI = completionService.replaceSpecificAnswer(responsesOpenAI);
 
 
         return responsesOpenAI.stream().reduce("", String::concat);

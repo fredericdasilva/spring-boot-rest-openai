@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of">
+    <list default="true" id="7179170a-ee0d-44b0-8572-5cbd5ca1d421" name="Changes" comment=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v7">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties.old" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ehcache.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -50,13 +57,17 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Fred\IdeaProjects\JavaApp_springboot-rest-api\src\main\resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Fred\IdeaProjects\JavaApp_springboot-rest-api\src\main\resources" />
+      <recent name="C:\Users\Fred\IdeaProjects\JavaApp_springboot-rest-api\src\main" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.example.requests" />
       <recent name="org.example.config" />
       <recent name="org.example.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JavaApp_springboot-rest-api">
+  <component name="RunManager" selected="JUnit.All in openai-chatgpt-rest-api">
     <configuration name="JavaApp_springboot-rest-api" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.openai.chatgpt.Application" />
       <module name="openai-chatgpt-rest-api" />
@@ -73,17 +84,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetingsControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OpenAIControllerTest.completion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="openai-chatgpt-rest-api" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.requests.*" />
+          <option name="PATTERN" value="org.openai.chatgpt.requests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.requests" />
-      <option name="MAIN_CLASS_NAME" value="org.example.requests.GreetingsControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="org.openai.chatgpt.requests" />
+      <option name="MAIN_CLASS_NAME" value="org.openai.chatgpt.requests.OpenAIControllerTest" />
+      <option name="METHOD_NAME" value="completion" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,10 +149,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in openai-chatgpt-rest-api" />
+        <item itemvalue="JUnit.OpenAIControllerTest.completion" />
         <item itemvalue="JUnit.org.example in JavaApp_springboot-rest-api" />
         <item itemvalue="JUnit.OpenAIControllerTest.image" />
         <item itemvalue="JUnit.OpenAIControllerTest.greetJava" />
-        <item itemvalue="JUnit.GreetingsControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +221,42 @@
       <option name="project" value="LOCAL" />
       <updated>1675670758683</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint">
+      <created>1675899551125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1675899551125</updated>
+    </task>
+    <task id="LOCAL-00010" summary=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v2">
+      <created>1675901672436</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675901672436</updated>
+    </task>
+    <task id="LOCAL-00011" summary=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v5">
+      <created>1675984988125</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675984988125</updated>
+    </task>
+    <task id="LOCAL-00012" summary=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v6">
+      <created>1675986048789</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675986048789</updated>
+    </task>
+    <task id="LOCAL-00013" summary=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v7">
+      <created>1675988194505</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675988194505</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,7 +277,12 @@
     <MESSAGE value=":green_heart: ci(ci): maven-compiler-plugin to java 8&#10;&#10;maven-compiler-plugin to java 8" />
     <MESSAGE value=":green_heart: ci(ci): add version 2.3.2 for maven-compiler-plugin&#10;&#10;add version 2.3.2 for maven-compiler-plugin" />
     <MESSAGE value=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of" />
-    <option name="LAST_COMMIT_MESSAGE" value=":green_heart: fix: revert usage of Map.of&#10;&#10;revert usage of Map.of" />
+    <MESSAGE value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint" />
+    <MESSAGE value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v2" />
+    <MESSAGE value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v5" />
+    <MESSAGE value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v6" />
+    <MESSAGE value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v7" />
+    <option name="LAST_COMMIT_MESSAGE" value=":construction: fix(fix): CORS&#10;&#10;enables CORS requests from any origin to any endpoint v7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -242,7 +294,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java</url>
-          <line>55</line>
+          <line>59</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -267,7 +319,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java</url>
-          <line>61</line>
+          <line>65</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -277,42 +329,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>83</line>
+          <line>82</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>96</line>
+          <line>95</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>102</line>
+          <line>101</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>97</line>
+          <line>96</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java</url>
-          <line>66</line>
+          <line>69</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/openai/chatgpt/controllers/OpenAIController.java</url>
-          <line>78</line>
+          <line>79</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>90</line>
+          <line>89</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/openai/chatgpt/requests/OpenAIControllerTest.java</url>
-          <line>93</line>
+          <line>92</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
