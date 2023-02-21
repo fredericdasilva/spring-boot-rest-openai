@@ -57,12 +57,6 @@ public class OpenAIController {
 
         log.info("/completion => " + text);
         List<String> responsesOpenAI = new ArrayList<>();
-        List<String> responsesGrumpyCat;
-
-        //Manage specific completion
-        responsesGrumpyCat = completionService.manageSpecificText(text);
-        if (!responsesGrumpyCat.isEmpty())
-            return responsesGrumpyCat.stream().reduce("", String::concat);
 
         OpenAiService service = openAiFactory.getOpenAiService();
 
@@ -75,8 +69,7 @@ public class OpenAIController {
                     .build();
             service.createCompletion(completionRequest).getChoices().forEach(c -> responsesOpenAI.add(c.getText()));
 
-
-        return responsesOpenAI.stream().reduce("", String::concat);
+        return completionService.replaceSpecificAnswer(responsesOpenAI.stream().reduce("", String::concat));
     }
 
     @PostMapping("/image")

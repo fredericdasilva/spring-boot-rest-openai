@@ -1,55 +1,37 @@
 package org.openai.chatgpt.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.openai.chatgpt.dto.CompletionInputDTO;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
 public class CompletionService {
 
-    final Map<String, String> answersPredefined = Stream.of(new String[][] {
-            { "[your name]", "Grumpy Cat" },
-            { "[votre nom]", "Grumpy Cat" },
+    final Map<String,String> answersPredefined = Stream.of(new String[][] {
+            {"[nom]", "Grumpy Cat, un chat reposant sur les api OpenAI (ChatGPT)"},
+            {"[votre nom]", "Grumpy Cat, un chat reposant sur les api OpenAI (ChatGPT)"},
+            {"[name]", "Grumpy Cat, an interactive cat using Open AI api (Chat GPT)"},
+            {"[your name]", "Grumpy Cat, an interactive cat using Open AI api (Chat GPT)"},
+            {"[date]", new SimpleDateFormat("dd/MM/yyyy").toString()},
+            {"{date}", new SimpleDateFormat("dd/MM/yyyy").toString()},
+            {"[date du jour]", new SimpleDateFormat("dd/MM/yyyy").toString()},
+            {"${new Date().toLocaleDateString()}", new SimpleDateFormat("dd/MM/yyyy").toString()},
+
     }).collect(Collectors.collectingAndThen(
             Collectors.toMap(data -> data[0], data -> data[1]),
             Collections::<String, String> unmodifiableMap));
 
-    public List<String> manageSpecificText(String text) throws IOException {
+    public String replaceSpecificAnswer(String responsesOpenAI) {
 
-        List<String> responses = new ArrayList<>();
-
-        ObjectMapper mapper = new ObjectMapper();
-        CompletionInputDTO dto = mapper.readValue(text, CompletionInputDTO.class);
-
-        String trimedText = dto.getPrompt().toLowerCase().trim().replace("\n", "").replace(" ","");
-        List<String> who = Arrays.asList("quiest-tu?", "quiest-tu", "quies-tu?", "commenttut'appelles", "commenttut'appelle","commenttutappelle", "commenttutappelle");
-
-        if (who.contains(trimedText))
-            responses.add("Mon nom est Grumpy Cat, un chat reposant sur les api OpenAI (chatGPT si tu préfères).\n Et toi quel est ton nom ?");
-
-        return responses;
-    }
-
-    public List<String> replaceSpecificAnswer(List<String> responsesOpenAI) {
-
-
-        for (String s: responsesOpenAI) {
-
-            Matcher m = Pattern.compile("\\([.*?]\\)").matcher(s);
-            while (m.find()) {
-                System.out.println(m.group(1));
-                answersPredefined.entrySet().contains(m.group(1));
-            }
-
+        for (String key: answersPredefined.keySet()){
+            if (responsesOpenAI.toLowerCase().contains(key.toLowerCase()))
+                responsesOpenAI = responsesOpenAI.replace(key,answersPredefined.get(key));
         }
 
-        return Collections.emptyList();
+        return responsesOpenAI;
     }
 }

@@ -88,6 +88,8 @@ public class OpenAIControllerTest {
 
         Mockito.when(openAiService.createCompletion(Mockito.any())).thenReturn(completionResult);
         Mockito.when(openAiFactory.getOpenAiService()).thenReturn(openAiService);
+        Mockito.when(completionService.replaceSpecificAnswer(urlCompletionTest)).thenReturn(urlCompletionTest);
+
 
 
         ObjectMapper mapper = new ObjectMapper();
@@ -99,7 +101,7 @@ public class OpenAIControllerTest {
             .getResponse()
             .getContentAsString();
 
-        Assert.assertEquals(response, urlCompletionTest);
+        Assert.assertEquals(urlCompletionTest, response);
     }
 
 
